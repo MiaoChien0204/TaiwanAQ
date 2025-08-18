@@ -6,3 +6,5 @@
 .quarto
 /data-raw/zips
 /data-raw/csv
+/data-raw/parquet/
+*.parquet

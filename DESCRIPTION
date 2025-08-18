@@ -13,4 +13,7 @@ BugReports: https://github.com/MiaoChien/TaiwanAQ/issues
 Imports: 
     arrow,
     dplyr,
-    httr2
+    fs,
+    glue,
+    httr2,
+    rappdirs
