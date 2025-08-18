@@ -51,9 +51,9 @@ download_parquet = function(year, item, version = "v0.1.0") {
 
   if (!fs::file_exists(cache_path)) {
     url = glue::glue("https://github.com/MiaoChien0204/TaiwanAQ/releases/download/{version}/{file_name}")
-    message("📥 Downloading from: ", url)
+    message("Downloading from: ", url)
     utils::download.file(url, destfile = cache_path, mode = "wb", quiet = TRUE)
-    message("✅ Saved to cache: ", cache_path)
+    message("Saved to cache: ", cache_path)
   }
 
   return(cache_path)

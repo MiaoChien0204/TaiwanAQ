@@ -4,18 +4,20 @@
 \alias{get_taiwan_aq}
 \title{Get Taiwan Air Quality Data}
 \usage{
-get_taiwan_aq(date, item = "PM2.5", station = NULL)
+get_taiwan_aq(start, end = start, item = "PM2.5", station = NULL)
 }
 \arguments{
-\item{date}{A character string or Date object indicating the target date (e.g., "2024-08-01").}
+\item{start}{Start date as character (e.g. "2022-01-01") or Date object.}
 
-\item{item}{Optional. A character vector of pollutants to include (e.g., "PM2.5", "SO2"). Defaults to all.}
+\item{end}{End date as character (e.g. "2022-01-31") or Date object.}
 
-\item{station}{A character string specifying the name of the air quality monitoring station.}
+\item{item}{Character scalar indicating the pollutant (e.g., "PM2.5").}
+
+\item{station}{Optional. Character vector of station names.}
 }
 \value{
-A tibble of air quality measurements for the specified station and date.
+A tibble of filtered air quality records.
 }
 \description{
-Retrieves air quality data from either local historical files or MOENV's online API, based on date and station.
+Retrieves air quality data from historical \code{.parquet} files.
 }
